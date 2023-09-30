@@ -22,10 +22,10 @@ const httpServer = createServer((_, res) => {
   res.end('ok\n');
 })
 const serverOpts: Partial<ServerOptions> = {
-  cors: {
-    origin: JSON.parse(process.env.ALLOW_ORIGIN || '"*"'),
-    credentials: !!process.env.ALLOW_ORIGIN,
-  },
+  // cors: {
+  //   origin: JSON.parse(process.env.ALLOW_ORIGIN || '"*"'),
+  //   credentials: !!process.env.ALLOW_ORIGIN,
+  // },
 }
 const io = new Server<
   IClientToServerEvent,
